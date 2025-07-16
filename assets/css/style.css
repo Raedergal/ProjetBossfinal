@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  margin: 0;
+  background-color: #f5f6f8;
+}
+
+* {
+  font-family: "Montserrat";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 70px;
+  background-color: #F1895C;
+}
+
+/* Search barre */
+
+#searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  padding-right: 20px;
+  gap: 10px;
+}
+#searchContainer button {
+  width: 60px;
+  height: 20px;
+}
+
+#titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+#listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  width: 50%;
+  gap: 30px;
+  border: solid #C5C6C6 1px;
+  border-radius: 25px;
+}
+
+.divPromo,
+.divStudent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 130px;
+  width: 98%;
+  padding: 20px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+/* Text dans les div */
+
+.textDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+  width: 60%;
+  height: 100%;
+}
+
+#listContainer div p {
+  margin: 0;
+  background-color: #ffffff;
+}
+
+#listContainer div p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#promoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f6f8;
+  padding: 20px;
+}
+
+/* Btn des div de la liste */
+
+#listContainer button {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+}
+
+/* validBtn */
+
+#validBtn {
+  margin: auto;
+  width: 50%;
+}
+
+/* editBtn */
+
+#editBtn:hover {
+  cursor: pointer;
+}
+
+#editBtn {
+  width: 20px;
+}
+
+/* deletedBtn */
+
+#deletedBtn {
+  width: 20px;
+}
+
+#deletedBtn:hover {
+  cursor: pointer;
+}
+
+/* detailBtn */
+
+#detailBtn {
+  background-color: #516079;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100px;
+  height: 35px;
+  transition: 0.3s;
+}
+
+#detailBtn:hover {
+  background-color: #2E3244;
+  box-shadow: 0 0 0 2px #353849;
+  color: #fff;
+}
+
+.divBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 15%;
+  justify-content: space-between;
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #6b6b6b7c;
+
+}
+
+#modalContent {
+  background-color: #ffffff;
+  margin: 10% auto;
+  width: 25%;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+.closeBtn {
+  color: #666666;
+  float: right;
+  font-size: 20px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  border-radius: 4px;
+  height: 30px;
+  border: solid 2px rgb(186, 186, 186);
+  font-size: 15px;
+}
+
+#avatar {
+  border: none;
+}
+
+form input:focus {
+  border-color: #F1895C;
+  outline: none;
+}
+
+/* addBtn */
+
+#addBtn {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #516079;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#addBtn,
+#addBtn span {
+  transition: 200ms;
+}
+
+#addBtn .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+#addBtn .icon {
+  position: absolute;
+  border-left: 1px solid #ffffff;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#addBtn svg {
+  width: 15px;
+  fill: #eee;
+}
+
+#addBtn:hover {
+  background: #516079;
+}
+
+#addBtn:active {
+  background: #516079;
+}
+
+#addBtn:hover .text {
+  color: transparent;
+}
+
+#addBtn:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+#addBtn:focus {
+  outline: none;
+}
+
+#addBtn:active .icon svg {
+  transform: scale(0.8);
+}
+
+.buttonSpan {
+  color: white;
+  margin: 150px;
+  font-size: 30px;
+}
+
+/* AVATAR */
+
+.divAvatar {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  padding-right: 30px;
+}
+
+.divAvatar img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}

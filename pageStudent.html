@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section id="promoContainer">
+            <div id="titleContainer">
+                <h1>Liste des étudiants</h1>
+                <button id="addBtn" class="noselect">
+                    <span class="text">Ajouter</span><span class="icon"><svg viewBox="0 0 24 24" height="24" width="24"
+                            xmlns="http://www.w3.org/2000/svg"></svg><span class="buttonSpan">+</span></span>
+                </button>
+            </div>
+            <div id="listContainer">
+            </div>
+        </section>
+        <section id="modalContainer" class="modal">
+            <div id="modalContent" class="modalContent">
+                <span class="closeBtn">x</span>
+                <h2></h2>
+                <form>
+                    <div>
+                        <label for="lastName">Nom</label>
+                        <input type="text" name="lastName" id="lastName">
+                    </div>
+                    <div>
+                        <label for="firstName">Prenom</label>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age">
+                    </div>
+                    <div id="avatarInput">
+                        <label for="avatar">Choisi un avatar</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                    </div>
+                    <div>
+                        <input type="submit" value="Valider" id="validBtn">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/students.js"></script>
+</body>
+
+</html>

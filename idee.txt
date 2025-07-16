@@ -1,0 +1,7 @@
+metre mon add event de linputr search juste pour activer le filter mode
+
+mettre la fonction filter et faire mettre listPromo = au return de la fonction filter
+comme ca ca remplace le tableau fetcher plus haut
+
+
+includes

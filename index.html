@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Recherche une promo">
+        </div>
+    </header>
+    <main>
+        <section id="promoContainer">
+            <div id="titleContainer">
+                <h1>Liste des promos</h1>
+                <button id="addBtn" class="noselect">
+                    <span class="text">Ajouter</span><span class="icon"><svg viewBox="0 0 24 24" height="24" width="24"
+                            xmlns="http://www.w3.org/2000/svg"></svg><span class="buttonSpan">+</span></span>
+                </button>
+            </div>
+            <div id="listContainer">
+            </div>
+        </section>
+        <section id="modalContainer" class="modal">
+            <div id="modalContent" class="modalContent">
+                <span class="closeBtn">x</span>
+                <h2></h2>
+                <form>
+                    <div>
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div>
+                        <label for="startDate">Date de début</label>
+                        <input type="date" name="startDate" id="startDate">
+                    </div>
+                    <div>
+                        <label for="endDate">Date de fin</label>
+                        <input type="date" name="endDate" id="endDate">
+                    </div>
+                    <div>
+                        <label for="formationDescription">Type de formation</label>
+                        <input type="text" name="formationDescription" id="formationDescription">
+                    </div>
+                    <div>
+                        <input type="submit" value="Valider" id="validBtn">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/js/modal.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
