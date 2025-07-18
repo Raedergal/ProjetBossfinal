@@ -1,12 +1,21 @@
 const modal = document.querySelector(".modal")
+const modalCalendar = document.querySelector(".modalCalendar")
+const modalContainer = document.querySelector("#modalContainer")
 const closeBtn = document.querySelector(".closeBtn")
 const h2 = document.querySelector("h2")
 
 closeBtn.addEventListener("click", closeModal)
 
 function closeModal() {
-    modal.style.display = "none"
+    modal.style.display = "none";
 }
+
+document.addEventListener("click", (e) => {
+    if (e.target === modalCalendar) {
+        modalCalendar.style.display = "none"
+    }
+})
+
 
 function addPromoModal() {
     modal.style.display = "block"
@@ -40,4 +49,8 @@ function updateStudentModal() {
     document.querySelector("#lastName").value = ""
     document.querySelector("#age").value = ""
     h2.textContent = "Modifie l'élève"
+}
+
+function calendar() {
+    modalCalendar.style.display = "block"
 }

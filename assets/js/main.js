@@ -57,12 +57,15 @@ function displayPromo(promo) {
     deletedBtn.src = "../assets/img/supprimer.png"
     const detailBtn = document.createElement("button")
     detailBtn.id = "detailBtn"
+    const calendarBtn = document.createElement("button")
+    calendarBtn.id = "calendarBtn"
     textname.textContent = `Promo ${promo.name}`
     const startDate = new Date(promo.startDate)
     const endDate = new Date(promo.endDate)
     textBeginDate.textContent = `Date de rentrée : ${formatDate(startDate)}`
     textEndDate.textContent = `Date de départ : ${formatDate(endDate)}`
     textDescription.textContent = `Type de formation : ${promo.formationDescription}`
+    calendarBtn.textContent = "Planning"
     detailBtn.textContent = "Details"
     editBtn.textContent = "Modifier"
     deletedBtn.textContent = "Supprimer"
@@ -75,6 +78,7 @@ function displayPromo(promo) {
     divBtn.appendChild(editBtn)
     divBtn.appendChild(deletedBtn)
     divBtn.appendChild(detailBtn)
+    divBtn.appendChild(calendarBtn)
     document.querySelector("#listContainer").appendChild(divList)
     deletedBtn.addEventListener("click", () => {
         deletedPromo(promo._id)
@@ -92,7 +96,10 @@ function displayPromo(promo) {
     })
     detailBtn.addEventListener("click", () => {
         localStorage.setItem("id", promo._id)
-        location.href = "../pageStudent.html"
+        location.href = "../pageStudent.html" // Pour amener a une autre page HTML via JS
+    })
+    calendarBtn.addEventListener("click", () => {
+        calendar()
     })
     return divList
 }
@@ -174,5 +181,3 @@ function formatDate(date) {
     }
     return [day, month, year].join('-');
 }
-
-

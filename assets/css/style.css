@@ -27,6 +27,7 @@ header {
   padding-right: 20px;
   gap: 10px;
 }
+
 #searchContainer button {
   width: 60px;
   height: 20px;
@@ -60,7 +61,7 @@ header {
   gap: 10px;
   background-color: #ffffff;
   border-radius: 10px;
-  height: 130px;
+  height: 180px;
   width: 98%;
   padding: 20px;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
@@ -94,7 +95,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #f5f6f8;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Btn des div de la liste */
@@ -150,6 +151,27 @@ header {
   box-shadow: 0 0 0 2px #353849;
   color: #fff;
 }
+
+/* calendar btn*/
+
+#calendarBtn {
+  background-color: #516079;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100px;
+  height: 35px;
+  transition: 0.3s;
+}
+
+#calendarBtn:hover {
+  background-color: #2E3244;
+  box-shadow: 0 0 0 2px #353849;
+  color: #fff;
+}
+
+/* */
 
 .divBtn {
   display: flex;
@@ -242,6 +264,7 @@ form input:focus {
   border: none;
   border-radius: 25px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px;
 }
 
 #addBtn,
@@ -303,6 +326,14 @@ form input:focus {
   font-size: 30px;
 }
 
+/* search input */
+
+#searchInput{
+  height: 25px;
+  border-radius: 5px;
+
+}
+
 /* AVATAR */
 
 .divAvatar {
@@ -317,6 +348,85 @@ form input:focus {
   width: 100%;
 }
 
-.hidden {
+/* Calendar */
+
+.modalCalendar {
   display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #6b6b6b7c;
+}
+
+#modalCalendarContent {
+  background-color: #ffffff;
+  margin: 10% auto;
+  width: 50%;
+  height: 50%;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px;
+}
+
+#calendar {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden{
+  display: none;
+}
+
+@media (max-width: 1200px) {
+
+  #listContainer {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+
+  #titleContainer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #titleContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #listContainer {
+    width: 80%;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  #titleContainer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #listContainer {
+    width: 80%;
+  }
+
+  .divPromo {
+    flex-direction: column;
+    height: 450px;
+  }
+
+  .textDiv {
+    align-items: center;
+  }
 }

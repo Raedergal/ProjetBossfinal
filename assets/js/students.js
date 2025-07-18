@@ -116,16 +116,7 @@ async function createStudent() {
 }
 
 async function updateStudent(currentId, currentStudentId) {
-    // const avatarimg = document.querySelector("#avatar").files[0]
-    // console.log(avatarimg);
     let formData = new FormData(form)
-    // formData.append("lastName", document.querySelector("#lastName").value)
-    // formData.append("firstName", document.querySelector("#firstName").value)
-    // formData.append("age", document.querySelector("#age").value)
-    // if (avatarimg) {
-    //     formData.append("avatar", document.querySelector("#avatar").files[0])
-    // }
-    console.log(formData);
     const response = await fetch(`http://146.59.242.125:3015/promos/${currentId}/students/${currentStudentId}`, {
         method: "PUT",
         headers: {
@@ -135,7 +126,6 @@ async function updateStudent(currentId, currentStudentId) {
     })
     const student = await response.json()
     const updateElement = document.getElementById(`${currentStudentId}`)
-    console.log(student.data);
     updateElement.replaceWith(await displayStudent(student.data))
 }
 
